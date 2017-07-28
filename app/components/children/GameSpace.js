@@ -38,29 +38,34 @@ class GameSpace extends Component {
 
     return (
       <div>
+        <Row>
+        <Col sm={4}>
+            {Object.keys(items).map((key) => {
+            const { active, still, className, left, top, type } = items[key];
+            return (
+                <Piece
+                    key={key}
+                    id={key}
+                    active={active}
+                    still={still}
+                    className={className}
+                    left={left}
+                    top={top}
+                    type={type}
+                    hideSourceOnDrag={hideSourceOnDrag}
+                />
+            );
+            })}
+        </Col>
 
-        {Object.keys(items).map((key) => {
-          const { active, still, className, left, top, type } = items[key];
-          return (
-            <Piece
-                key={key}
-                id={key}
-                active={active}
-                still={still}
-                className={className}
-                left={left}
-                top={top}
-                type={type}
-                hideSourceOnDrag={hideSourceOnDrag}
-              />
-          );
-        })}
+        <Col sm={8}>
 
-        <Venn accepts={ItemTypes.PLANET} id='category1' moveItem={this.moveItem}/>
-        <Venn accepts={ItemTypes.ALIEN} id='category2' moveItem={this.moveItem}/>
-        <Venn accepts={ItemTypes.SATELITE} id='category3' moveItem={this.moveItem}/>
-        <Venn accepts={[ItemTypes.ALIEN, ItemTypes.PLANET]} id='category4' moveItem={this.moveItem} />
-
+            <Venn accepts={ItemTypes.PLANET} id='category1' moveItem={this.moveItem}/>
+            <Venn accepts={ItemTypes.ALIEN} id='category2' moveItem={this.moveItem}/>
+            <Venn accepts={ItemTypes.SATELITE} id='category3' moveItem={this.moveItem}/>
+            <Venn accepts={[ItemTypes.ALIEN, ItemTypes.PLANET]} id='category4' moveItem={this.moveItem} />
+        </Col>
+        </Row>
         <Options />
       </div>
     );

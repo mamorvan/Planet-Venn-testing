@@ -23,29 +23,19 @@ const vennTarget = {
 
 class Venn extends Component {
 
-  render() {
-    const { id, canDrop, isOver, connectDropTarget } = this.props;
-
-    const isActive = isOver && canDrop;
-
-    let backgroundColor = 'blue';
-    if (isActive) {
-      backgroundColor = 'yellow';
-    } else if (canDrop) {
-      backgroundColor = 'green';
+    constructor(props) {
+        super(props);
+        console.log(this.props);
     }
 
+  render() {
+    const { id, canDrop, isOver, connectDropTarget } = this.props;
+    const isActive = isOver && canDrop;
+
+
     return connectDropTarget(
-      <div style = {{
-        height: '100px',
-        width: '100px',
-        border: '1px solid blue',
-        borderRadius: '50%',
-        margin: '10px',
-        float: 'left',
-        backgroundColor
-      }}>
-        {isActive ? 'Relase to drop' : 'Drag an Item here'}
+      <div id={this.props.id} className="venn-div">
+
       </div>
     );
   }
