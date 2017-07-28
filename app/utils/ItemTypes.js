@@ -1,4 +1,4 @@
-exports.ItemTypes = {
+export default {
   PLANET: 'planet',
   ALIEN: 'alien',
   SATELITE: 'satelite'

@@ -18,8 +18,8 @@ class DashboardPage extends React.Component {
     super(props);
 
     this.state = {
-        secretData: '',
-        hideSourceDrag: true
+        secretData: '', // we may need to use update to avoid overwriting secretData
+        hideSourceOnDrag: true
     };
     this.handleHideSourceClick = this.handleHideSourceClick.bind(this);
   }
@@ -48,7 +48,7 @@ class DashboardPage extends React.Component {
   }
 
   render() {
-    const { hideSourceOnDrag } = this.state.hideSourceDrag;
+    const { hideSourceOnDrag } = this.state;
     return (
       <div>
     
@@ -85,5 +85,6 @@ class DashboardPage extends React.Component {
     );
   }
 }
+
 export default DashboardPage;
 
