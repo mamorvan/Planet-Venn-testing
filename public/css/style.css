@@ -1,0 +1,280 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {   
+    background-color: #002;
+    font-family: "Roboto", sans-serif;
+    color: #00BCD4;
+    margin: 0 0 60px 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+/********************** HOME PAGE ********************/
+.home-page {
+    background-image: url("../images/background3.jpg");
+    background-size: cover;
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+header {
+    text-align: center;
+    padding: 50px;
+    margin-top: 10%;
+}
+header h1 {
+    font-family: "Megrim", cursive;
+    font-size: 100px;
+}
+header img {
+    border: 2px solid #00487B;
+    border-radius: 50%;
+}
+.button-spacing {
+    margin: 20px;
+}
+#scoreboard-container {
+    background-color: #002;
+    opacity: .75;
+    padding: 20px 25%;
+}
+#scoreboard-container h2{
+    text-align: center;
+    padding: 5px;
+}
+
+/***** auth forms *****/
+#LogInForm, #signUpForm {
+  margin: 0 auto;
+  text-align: center;
+  width: 700px;
+}
+
+/*************************** GAME PAGE *******************/
+
+/*****nav*****/
+nav {
+    text-align: center;
+    color: #00BCD4;
+}
+#logo {
+    font-family: "Megrim", cursive;
+    color:  #00BCD4;
+    font-size: 50px;
+    font-weight: bolder;
+    margin: 0;
+    margin-bottom: 50px;
+}
+nav button svg {
+    width: 35px !important;
+    height: 35px !important;
+    margin: 10px;
+}
+/*****Score*****/
+#score-container {
+    text-align: center;
+    margin-left: 10px;
+}
+#make-a-guess {
+    text-align: center;
+}
+#guesstherules {
+    margin: 10px !important;
+    color: #00BCD4 !important;  
+}
+#rule1guess>div>div, #rule2guess>div>div {
+    color: #00BCD4 !important;
+}
+
+/*****pieces*****/
+#pieces-container {
+    text-align: center;
+    margin: 10px;
+}
+.big {
+  padding: 5px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 100px;
+  height: 100px;
+  z-index: 3;
+}
+.small {
+  width: 40px;
+  height: 40px;
+  z-index: 5;
+}
+#dropHere7 {
+  z-index: 7;
+}
+#sunRedBig, #sunRedSmall {
+  filter: saturate(4);
+}
+#sunGreenBig, #satRedBig, #alienBlueBig {
+  filter: hue-rotate(90deg);
+}
+#sunBlueSmall {
+  filter: hue-rotate(180deg);
+}
+#satGreenSmall {
+  filter: hue-rotate(235deg);
+}
+#alienRedSmall {
+  filter: hue-rotate(255deg);
+}
+
+/*****venn diagram*****/
+#venn div {
+    height: 350px;
+    width: 250px;
+    border-radius: 50%;
+    display: flex;
+    float: left;
+    opacity: .9;
+    text-align: center;
+}
+
+#category1 {
+    background-image: url("../images/io.jpg");
+    background-size: cover;
+    padding-right: 100px;
+}
+
+#category2 {
+    background-color: #AFB0A3;
+    margin-left: -200px;
+    padding-left: 100px;
+}
+
+#venn #category3 {
+    border: 0;
+    height: 250px;
+    width: 100px;
+    left: -100px;
+    top: 100px;
+    position: relative;
+    text-align: center;
+    z-index: 10;
+    opacity: 1;
+}
+
+/*****black hole*****/
+#category4 {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  margin-left: 20%;
+}
+.pretty.circle label i {
+    padding: 0px;
+}
+.pretty i {
+    padding: 0px;
+    font-size: 2em !important;
+    margin-top: 20%;
+    margin-left: 20%;
+}
+.pretty i:before {
+    background-color: transparent;
+}
+#board-container {
+    z-index: -9999;
+} 
+.rotateAway {
+        -webkit-animation: 10s;
+        animation-fill-mode: forwards;
+        animation-name: rotateaway;
+}
+@-webkit-keyframes rotateaway {
+		from {
+                -webkit-transform: rotate(0deg) scale(1);
+        }
+		to {
+                -webkit-transform: rotate(-720deg) scale(0.001);
+		}
+}
+#rotate {
+		-webkit-animation: rotation 2s infinite linear;
+}
+@-webkit-keyframes rotation {
+		from {
+				-webkit-transform: rotate(0deg);
+		}
+		to {
+				-webkit-transform: rotate(359deg);
+		}
+}
+
+/*****options******/
+#button-container {
+    padding: 3% 10%;
+    text-align: center;
+}
+
+/***** checklist component*****/
+.checklistDiv {
+    height: 100%;
+    background-color: #00BCD4;
+    padding: 5px;
+    font-size: 15px;
+}
+.tablePanel {
+    text-align: center;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+td {
+    padding: 8px 4px;
+}
+#left {
+    padding: 10px;
+}
+.panel-body {
+ margin-left: 10%;
+}
+input {
+    width: 100%;
+    border: 0px solid;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    background-color: transparent;
+}
+
+/***** rules modal ****/
+#rules-container {
+    color: #002;
+}
+#rules-container li {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/***** footer styling *****/
+#footer {
+    position: absolute;
+    bottom: 0;
+    background-color: #00BCD4;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    height: 20px;
+}
+#footer img {
+    border-radius: 50%;
+}
