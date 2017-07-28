@@ -18,6 +18,10 @@ function collect(connect, monitor) {
 }
 
 class Piece extends Component {
+    constructor(props) {
+        super(props)
+        console.log(this.props);
+    }
 
   render() {
     console.log(this.props);
@@ -29,8 +33,8 @@ class Piece extends Component {
     }
 
     return connectDragSource(
-      <div style = {{ position: 'absolute', left, top }}>
-        <img src={active} data-active={active} data-still={still} className={className} alt={id} />
+      <div>
+        <img id={id} src={active} data-active={active} data-still={still} className={className} alt={id} />
       </div>
     );
   }

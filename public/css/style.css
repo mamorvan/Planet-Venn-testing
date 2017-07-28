@@ -101,6 +101,10 @@ nav button svg {
     text-align: center;
     margin: 10px;
 }
+.piece {
+    margin: 10px;
+    float: left;
+}
 .big {
   padding: 5px;
   margin-left: 20px;
