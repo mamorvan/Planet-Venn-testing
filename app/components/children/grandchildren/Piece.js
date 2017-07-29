@@ -32,9 +32,9 @@ console.log(this.props);
     }
 
     return connectDragSource(
-      <div>
+ 
         <img id={id} src={still} data-active={active} data-still={still} className={className} alt={id} />
-      </div>
+  
     );
   }
 }
