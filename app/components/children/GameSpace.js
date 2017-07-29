@@ -41,7 +41,7 @@ class GameSpace extends Component {
   }
 
   moveItem(id, left, top) {
-console.log(id, left, top);
+    console.log(id, left, top);
     this.setState(update(this.state, {
       items: {
         [id]: {
@@ -50,6 +50,7 @@ console.log(id, left, top);
       }
     }));
   }
+  
   render() {
     const { hideSourceOnDrag } = this.props;
     const { items } = this.state;
@@ -80,7 +81,7 @@ console.log(id, left, top);
         
         <Col sm={8}>
 
-            <Venn accepts={ItemTypes.SUNREDBIG} id='category1' moveItem={this.moveItem}/>
+            <Venn accepts= {[ItemTypes.SUNREDBIG, ItemTypes.SUNGREENBIG, ItemTypes.SUNBLUEBIG, ItemTypes.SUNREDSMALL, ItemTypes.SUNGREENSMALL, ItemTypes.SUNBLUESMALL ]} id='category1' moveItem={this.moveItem}/>
             <Venn accepts={ItemTypes.ALIENGREENSMALL} id='category2' moveItem={this.moveItem}/>
             <Venn accepts={[ItemTypes.SATREDBIG, ItemTypes.SATBLUEBIG]} id='category3' moveItem={this.moveItem}/>
             <Venn accepts={[ItemTypes.ALIENREDSMALL, ItemTypes.SUNGREENBIG]} id='category4' moveItem={this.moveItem} />

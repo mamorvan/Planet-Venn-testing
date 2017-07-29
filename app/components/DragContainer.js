@@ -21,7 +21,7 @@ class DragContainer extends Component {
         const { hideSourceOnDrag } = this.state;
 
         return (
-            <GameSpace hideSourceOnDrag = { hideSourceOnDrag } />
+            <GameSpace hideSourceOnDrag={hideSourceOnDrag} />
         )
     }
 }
