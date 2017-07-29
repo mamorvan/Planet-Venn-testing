@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 const pieceSource = {
   beginDrag: function (props) {
 console.log(props);
-    const { id, top, left, type } = props;
-    return { id, top, left, type};
+    const { id, top, left } = props;
+    return { id, top, left };
   },
   endDrag: function (props, monitor) {
       const item = monitor.getItem();
@@ -24,6 +24,7 @@ function collect(connect, monitor) {
 class Piece extends Component {
 
   render() {
+console.log(this.props);
     const { id, active, still, className, left, top, hideSourceOnDrag, isDragging, connectDragSource } = this.props;
 
     if (isDragging && hideSourceOnDrag) {

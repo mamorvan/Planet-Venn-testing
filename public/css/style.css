@@ -124,16 +124,16 @@ nav button svg {
 #sunRedBig, #sunRedSmall {
   filter: saturate(4);
 }
-#sunGreenBig, #satRedBig, #alienBlueBig {
+#sunGreenBig, #satRedBig, #alienBlueBig, #alienBlueSmall, #satRedSmall, #sunGreenSmall {
   filter: hue-rotate(90deg);
 }
-#sunBlueSmall {
+#sunBlueSmall, #sunBlueBig {
   filter: hue-rotate(180deg);
 }
-#satGreenSmall {
+#satGreenSmall, #satGreenBig {
   filter: hue-rotate(235deg);
 }
-#alienRedSmall {
+#alienRedSmall, #alienRedBig {
   filter: hue-rotate(255deg);
 }
 

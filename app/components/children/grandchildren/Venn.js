@@ -28,7 +28,6 @@ class Venn extends Component {
     }
 
   render() {
-    console.log(this.props);
     const { canDrop, isOver, connectDropTarget } = this.props;
     const isActive = isOver && canDrop;
 

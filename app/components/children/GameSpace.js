@@ -14,28 +14,28 @@ class GameSpace extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: {
-        a: { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sun.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sun_still.gif?raw=true', id: 'sunRedSmall', className: 'small piece', left: 50, top: 380, type: ItemTypes.SUNREDSMALL},
-        b: { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sun.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sun_still.gif?raw=true', id: 'sunBlueSmall', className: 'small piece', left: 50, top: 380, type: ItemTypes.SUNBLUESMALL },
-        c: { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sun.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sun_still.gif?raw=true', id: 'sunGreenSmall', className: 'small piece', left: 50, top: 380, type: ItemTypes.SUNGREENSMALL },
-        d: { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sun.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sun_still.gif?raw=true', id: 'sunRedBig', className: 'big piece', left: 50, top: 380, type: ItemTypes.SUNREDBIG },
-        e: { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sun.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sun_still.gif?raw=true', id: 'sunBlueBig', className: 'big piece', left: 50, top: 380, type: ItemTypes.SUNBLUEBIG },
-        f: { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sun.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sun_still.gif?raw=true', id: 'sunGreenBig', className: 'big piece', left: 50, top: 380, type: ItemTypes.SUNGREENBIG },
+      items: [
+        { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sun.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sun_still.gif?raw=true', id: 'sunRedSmall', className: 'small piece', left: 50, top: 380, type: ItemTypes.SUNREDSMALL},
+        { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sun.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sun_still.gif?raw=true', id: 'sunBlueSmall', className: 'small piece', left: 50, top: 380, type: ItemTypes.SUNBLUESMALL },
+        { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sun.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sun_still.gif?raw=true', id: 'sunGreenSmall', className: 'small piece', left: 50, top: 380, type: ItemTypes.SUNGREENSMALL },
+        { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sun.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sun_still.gif?raw=true', id: 'sunRedBig', className: 'big piece', left: 50, top: 380, type: ItemTypes.SUNREDBIG },
+        { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sun.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sun_still.gif?raw=true', id: 'sunBlueBig', className: 'big piece', left: 50, top: 380, type: ItemTypes.SUNBLUEBIG },
+        { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sun.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sun_still.gif?raw=true', id: 'sunGreenBig', className: 'big piece', left: 50, top: 380, type: ItemTypes.SUNGREENBIG },
 
-        g: { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/alien.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/alien_still.gif?raw=true', id: 'alienRedSmall', className: 'small piece', left: 100, top: 380, type: ItemTypes.ALIENREDSMALL},
-        h: { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/alien.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/alien_still.gif?raw=true', id: 'alienBlueSmall', className: 'small piece', left: 100, top: 380, type: ItemTypes.ALIENBLUESMALL }, 
-        i: { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/alien.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/alien_still.gif?raw=true', id: 'alienGreenSmall', className: 'small piece', left: 100, top: 380, type: ItemTypes.ALIENGREENSMALL }, 
-        j: { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/alien.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/alien_still.gif?raw=true', id: 'alienRedBig', className: 'big piece', left: 100, top: 380, type: ItemTypes.ALIENREDBIG }, 
-        k: { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/alien.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/alien_still.gif?raw=true', id: 'alienBlueBig', className: 'big piece', left: 100, top: 380, type: ItemTypes.ALIENBLUEBIG }, 
-        l: { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/alien.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/alien_still.gif?raw=true', id: 'alienGreenBig', className: 'big piece', left: 100, top: 380, type: ItemTypes.ALIENGREENBIG },
+        { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/alien.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/alien_still.gif?raw=true', id: 'alienRedSmall', className: 'small piece', left: 100, top: 380, type: ItemTypes.ALIENREDSMALL},
+        { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/alien.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/alien_still.gif?raw=true', id: 'alienBlueSmall', className: 'small piece', left: 100, top: 380, type: ItemTypes.ALIENBLUESMALL }, 
+        { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/alien.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/alien_still.gif?raw=true', id: 'alienGreenSmall', className: 'small piece', left: 100, top: 380, type: ItemTypes.ALIENGREENSMALL }, 
+        { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/alien.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/alien_still.gif?raw=true', id: 'alienRedBig', className: 'big piece', left: 100, top: 380, type: ItemTypes.ALIENREDBIG }, 
+        { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/alien.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/alien_still.gif?raw=true', id: 'alienBlueBig', className: 'big piece', left: 100, top: 380, type: ItemTypes.ALIENBLUEBIG }, 
+        { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/alien.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/alien_still.gif?raw=true', id: 'alienGreenBig', className: 'big piece', left: 100, top: 380, type: ItemTypes.ALIENGREENBIG },
 
-        m: { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sat.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sat_still.gif?raw=true', id: 'satRedSmall', className: 'small piece', left: 150, top: 380, type: ItemTypes.SATREDSMALL },
-        n: { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sat.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sat_still.gif?raw=true', id: 'satBlueSmall', className: 'small piece', left: 150, top: 380, type: ItemTypes.SATBLUESMALL },
-        o: { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sat.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sat_still.gif?raw=true', id: 'satGreenSmall', className: 'small piece', left: 150, top: 380, type: ItemTypes.SATGREENSMALL },
-        p: { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sat.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sat_still.gif?raw=true', id: 'satRedBig', className: 'big piece', left: 150, top: 380, type: ItemTypes.SATREDBIG },
-        q: { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sat.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sat_still.gif?raw=true', id: 'satBlueBig', className: 'big piece', left: 150, top: 380, type: ItemTypes.SATBLUEBIG },
-        r: { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sat.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sat_still.gif?raw=true', id: 'satGreenBig', className: 'big piece', left: 150, top: 380, type: ItemTypes.SATGREENBIG },
-      }
+        { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sat.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sat_still.gif?raw=true', id: 'satRedSmall', className: 'small piece', left: 150, top: 380, type: ItemTypes.SATREDSMALL },
+        { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sat.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sat_still.gif?raw=true', id: 'satBlueSmall', className: 'small piece', left: 150, top: 380, type: ItemTypes.SATBLUESMALL },
+        { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sat.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sat_still.gif?raw=true', id: 'satGreenSmall', className: 'small piece', left: 150, top: 380, type: ItemTypes.SATGREENSMALL },
+        { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sat.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sat_still.gif?raw=true', id: 'satRedBig', className: 'big piece', left: 150, top: 380, type: ItemTypes.SATREDBIG },
+        { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sat.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sat_still.gif?raw=true', id: 'satBlueBig', className: 'big piece', left: 150, top: 380, type: ItemTypes.SATBLUEBIG },
+        { active: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sat.gif?raw=true', still: 'https://github.com/Mission-probable/Planet-Venn/blob/master/public/images/sat_still.gif?raw=true', id: 'satGreenBig', className: 'big piece', left: 150, top: 380, type: ItemTypes.SATGREENBIG },
+    ]
     };
     this.moveItem = this.moveItem.bind(this);
   }
@@ -50,7 +50,7 @@ class GameSpace extends Component {
       }
     }));
   }
-  
+
   render() {
     const { hideSourceOnDrag } = this.props;
     const { items } = this.state;
@@ -60,11 +60,9 @@ class GameSpace extends Component {
         <Row>
         <Col sm={4}>
         <div id="pieces-container">
-            {Object.keys(items).map((key) => {
-            const { active, still, id, className, left, top, type } = items[key];
-            return (
+            {items.map(({ active, still, id, className, left, top, type }, index)  =>
                 <Piece
-                    key={key}
+                    key={index}
                     id={id}
                     active={active}
                     still={still}
@@ -74,8 +72,7 @@ class GameSpace extends Component {
                     type={type}
                     hideSourceOnDrag={hideSourceOnDrag}
                 />
-            );
-        })}
+            )}
         </div>
         </Col>
         
