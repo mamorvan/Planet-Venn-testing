@@ -11,10 +11,6 @@ console.log(props);
   endDrag: function (props, monitor) {
       const item = monitor.getItem();
       const dropResult = monitor.getDropResult();
-
-      if (dropResult) {
-          window.alert(`You dropped ${item.id} into ${dropResult.id} `);
-      }
   }
 };
 

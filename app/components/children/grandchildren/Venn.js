@@ -18,7 +18,7 @@ const vennTarget = {
     const left = Math.round(item.left + delta.x);
     const top = Math.round(item.top + delta.y);
 
-    // component.props.moveItem(item.id, left, top);
+    component.props.moveItem(item.id, left, top);
   }
 };
 
