@@ -4,9 +4,17 @@ import PropTypes from 'prop-types';
 
 const pieceSource = {
   beginDrag: function (props) {
-    console.log(props);
+console.log(props);
     const { id, top, left } = props;
     return { id, top, left };
+  },
+  endDrag: function (props, monitor) {
+      const item = monitor.getItem();
+      const dropResult = monitor.getDropResult();
+
+      if (dropResult) {
+          window.alert(`You dropped ${item.id} into ${dropResult.id} `);
+      }
   }
 };
 
@@ -18,13 +26,8 @@ function collect(connect, monitor) {
 }
 
 class Piece extends Component {
-    constructor(props) {
-        super(props)
-        console.log(this.props);
-    }
 
   render() {
-    console.log(this.props);
     const { id, active, still, className, hideSourceOnDrag, left, top,
       isDragging, connectDragSource } = this.props;
 
@@ -34,7 +37,7 @@ class Piece extends Component {
 
     return connectDragSource(
       <div>
-        <img id={id} src={active} data-active={active} data-still={still} className={className} alt={id} />
+        <img id={id} src={still} data-active={active} data-still={still} className={className} alt={id} />
       </div>
     );
   }

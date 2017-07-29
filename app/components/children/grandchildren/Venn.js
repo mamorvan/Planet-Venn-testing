@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { DropTarget } from 'react-dnd';
 import PropTypes from 'prop-types';
+import ItemTypes from '../../../utils/ItemTypes';
 
 function collect(connect, monitor) {
   return {
@@ -17,21 +18,18 @@ const vennTarget = {
     const left = Math.round(item.left + delta.x);
     const top = Math.round(item.top + delta.y);
 
-    component.props.moveItem(item.id, left, top);
+    // component.props.moveItem(item.id, left, top);
   }
 };
 
 class Venn extends Component {
-
     constructor(props) {
         super(props);
-        console.log(this.props);
     }
 
   render() {
     const { id, canDrop, isOver, connectDropTarget } = this.props;
     const isActive = isOver && canDrop;
-
 
     return connectDropTarget(
       <div id={this.props.id} className="venn-div">

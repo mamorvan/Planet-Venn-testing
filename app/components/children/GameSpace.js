@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'react-grid-system';
-import update from 'react/lib/update';
 import HTML5Backend from 'react-dnd-html5-backend';
 import { DragDropContext } from 'react-dnd';
+import update from 'react/lib/update';
 import ItemTypes from '../../utils/ItemTypes';
 import PropTypes from 'prop-types';
 
@@ -41,6 +41,7 @@ class GameSpace extends Component {
   }
 
   moveItem(id, left, top) {
+console.log(id, left, top);
     this.setState(update(this.state, {
       items: {
         [id]: {

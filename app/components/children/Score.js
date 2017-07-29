@@ -12,7 +12,7 @@ class Score extends Component {
         this.state = {
             value1: 1,
             value2: 2,
-            message: getMessage(),
+            message: '',
             action: 'PLAY AGAIN?',
             open: false,
         };
@@ -24,7 +24,7 @@ class Score extends Component {
     }
 
     componentDidMount() {
-        startGame();
+        // startGame();
     }
         
     handleDropDown1Change(event, index, value) {

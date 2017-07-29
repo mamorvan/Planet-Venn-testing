@@ -8,7 +8,7 @@ import {cyan500} from 'material-ui/styles/colors';
 import { Link } from "react-router";
 
 import Auth from '../utils/Auth';
-import GameSpace from './children/GameSpace';
+import DragContainer from './DragContainer';
 import Footer from './children/Footer';
 import Score from './children/Score';
 
@@ -19,9 +19,7 @@ class DashboardPage extends React.Component {
 
     this.state = {
         secretData: '', // we may need to use update to avoid overwriting secretData
-        hideSourceOnDrag: true
     };
-    this.handleHideSourceClick = this.handleHideSourceClick.bind(this);
   }
 
   componentDidMount() {
@@ -41,14 +39,8 @@ class DashboardPage extends React.Component {
     xhr.send();
   }
 
-  handleHideSourceClick() {
-    this.setState({
-      hideSourceOnDrag: !this.state.hideSourceOnDrag
-    });
-  }
-
   render() {
-    const { hideSourceOnDrag } = this.state;
+   
     return (
       <div>
     
@@ -77,7 +69,7 @@ class DashboardPage extends React.Component {
             </Row>
         </nav>
 
-        <GameSpace hideSourceOnDrag={hideSourceOnDrag} />
+        <DragContainer />
         
         <Footer />
 
